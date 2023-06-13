@@ -4,7 +4,7 @@ import imageio.v2 as imageio
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Read fertility file
+# Read fertility rate per country per year file
 fert = pd.read_csv('./data/gapminder_total_fertility.csv', index_col=0)
 
 # Convert columns to integers
@@ -16,10 +16,10 @@ fert.index.name = 'country'
 # Reset index while converting to long format
 fert = fert.reset_index()
 
-# Convert from wide
+# Convert from wide to long form 
 fert = fert.melt(id_vars='country', var_name='year', value_name='fertility_rate')
 
-# Read life expectancy data
+# Read life expectancy per country per year file
 life = pd.read_excel('./data/gapminder_lifeexpectancy.xlsx', index_col=0)
 
 # Rename the Life Expectancy column to country
@@ -28,10 +28,10 @@ life.index.name = 'country'
 # Reset index while converting to long format
 life = life.reset_index()
 
-# Convert from wide
+# Convert from wide to long form
 life = life.melt(id_vars='country', var_name='year', value_name='life_expectancy')
 
-# Read population data
+# Read population per country per year data
 pop = pd.read_excel('./data/gapminder_population.xlsx', index_col=0)
 
 # Rename the Total population column to country
@@ -40,13 +40,13 @@ pop.index.name = 'country'
 # Reset index while converting to long format
 pop = pop.reset_index()
 
-# Convert from wide
+# Convert from wide to long form
 pop = pop.melt(id_vars='country', var_name='year', value_name='total_population')
 
-# import continents data
+# Read the country per continents data
 continents = pd.read_csv('./data/continents.csv',  sep = ";")
 
-# Import income per capita data
+# Read the income per capita per country per year data
 income = pd.read_csv('/home/shinde/Documents/trainings/Spiced_Academy/Spiced_projects/Week_1/data/income_per_person_gdppercapita_ppp_inflation_adjusted.csv')
 # income.head(10)
 

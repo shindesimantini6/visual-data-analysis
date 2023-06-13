@@ -1,6 +1,6 @@
 # Visual Data Analysis
 
-Application of visual data analysis on Gapminder dataset of fertility rates and income per person vs life expectancy for the world.
+Application of visual data analysis on Gapminder dataset of fertility rates and income per person vs life expectancy for the world. A thorough explanation of the project is published [here](https://medium.com/@simantinishinde/visual-data-analysis-c659b3ee69a1)
 
 The project involves creating a visual of three parameters correlating with each other, i.e. the income per person, fertility rates, life expectancy and population. The visual is created for data from 1960 to 2022. 
 
